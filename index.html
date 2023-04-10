@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Předpověď počasí</title>
+      <link rel="icon" href="img/favicon.ico" type="image/x-icon" loading="lazy"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+      <link rel="stylesheet" href="style.min.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+   </head>
+   <body>
+      <section class="section">
+         <div class="container">
+            <h1 class="title">
+               Předpověď počasí
+               <img src="img/sun.png" alt="sun" width="100" loading="lazy">
+             </h1>
+            <div class="columns">
+               <div class="column">
+                  <form id="cityForm">
+                     <div class="field">
+                        <label class="label is-narrow" for="cityInput">Zadejte město:</label>
+                        <div class="control is-expanded">
+                          <input class="input" type="text" id="cityInput" placeholder="Zadejte název města" />
+                        </div>
+                      </div>                                      
+                     <div class="is-flex is-align-items-center">
+                        <button class="button is-primary" type="button">Získat předpověď počasí podle zadaného města</button>
+                        <img class="ml-4 mt-2" src="img/city.png" alt="city" width="100" loading="lazy">
+                      </div>                      
+                  </form>
+                  <div class="is-flex is-align-items-center mt-4">
+                     <button class="button is-info" id="showWeatherBtn">Získat předpověď počasí podle aktuální polohy</button>
+                     <img class="ml-4" src="img/location.png" alt="location" width="80" loading="lazy">
+                  </div>
+                  <div id="cityName" class="is-size-5 mt-4"></div>
+               </div>
+            </div>
+            <div id="weatherInfo"></div>
+         </div>
+      </section>
+      <footer>
+         <div class="container has-text-centered">
+            <p>&copy; 2023. Data jsou získána z <a href="https://www.weatherapi.com/" target="_blank" rel="noopener noreferrer">WeatherAPI.com</a> a</a>.</p>
+         </div>
+      </footer>
+      <script src="app.min.js"></script>
+   </body>
+</html>
